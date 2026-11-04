@@ -1,0 +1,393 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>EPF PPF SSY Calculator India 2024-25 — PF Interest & Maturity</title>
+<meta name="description" content="Free EPF, PPF and Sukanya Samriddhi Yojana (SSY) calculator India 2024-25. Year-by-year interest table, maturity amount, employer EPF contribution. Instant, no signup.">
+<link rel="canonical" href="https://nxtcraft.github.io/pfcalc/">
+<meta name="keywords" content="epf calculator india, ppf calculator 2024, sukanya samriddhi yojana calculator, ssy calculator, pf calculator, epf interest calculator, ppf maturity calculator, employee provident fund calculator">
+<meta property="og:title" content="EPF PPF SSY Calculator India 2024-25">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://nxtcraft.github.io/pfcalc/">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="EPF PPF SSY Calculator India 2024-25">
+<meta name="twitter:description" content="Calculate EPF maturity, PPF returns and Sukanya Samriddhi Yojana corpus. Free, instant, browser-based.">
+<meta name="twitter:site" content="@nxtcraft">
+<meta name="theme-color" content="#0d9488">
+<link rel="manifest" href="/pfcalc/manifest.json">
+<meta name="mobile-web-app-capable" content="yes">
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-R9EW10BJGW"></script>
+<script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-R9EW10BJGW');</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"WebApplication","name":"EPF PPF SSY Calculator","url":"https://nxtcraft.github.io/pfcalc/","description":"Free EPF, PPF and Sukanya Samriddhi Yojana calculator for India 2024-25.","applicationCategory":"FinanceApplication","operatingSystem":"Web","offers":{"@type":"Offer","price":"0","priceCurrency":"INR"}}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"What is the EPF interest rate for 2024-25?","acceptedAnswer":{"@type":"Answer","text":"The EPF interest rate for FY 2024-25 is 8.25% per annum, as announced by EPFO. Interest is calculated monthly on the running balance but credited to the account at the end of the financial year."}},{"@type":"Question","name":"What is the PPF interest rate?","acceptedAnswer":{"@type":"Answer","text":"The PPF (Public Provident Fund) interest rate for Q1 FY 2024-25 is 7.1% per annum, compounded annually. The government reviews rates quarterly. PPF has a 15-year lock-in extendable in 5-year blocks."}},{"@type":"Question","name":"What is the Sukanya Samriddhi Yojana interest rate?","acceptedAnswer":{"@type":"Answer","text":"The SSY interest rate for Q1 FY 2024-25 is 8.2% per annum, the highest among all small savings schemes. Deposits are made for 15 years; the account matures 21 years from opening."}},{"@type":"Question","name":"How is employer EPF contribution calculated?","acceptedAnswer":{"@type":"Answer","text":"Employer contributes 12% of Basic+DA. Of this, 8.33% goes to the Employee Pension Scheme (EPS), capped at ₹1,250/month (on ₹15,000 ceiling). The rest (3.67%, or 12% minus EPS amount) goes to EPF."}}]}</script>
+<style>
+:root{--bg:#0b0f1a;--surface:#111827;--surface2:#1e2535;--border:#2a3347;--text:#f1f5f9;--muted:#8896b3;--accent:#0d9488;--accent2:#14b8a6;--success:#10b981;--error:#ef4444;--radius:10px}
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;background:var(--bg);color:var(--text);min-height:100vh;font-size:15px}
+a{color:var(--accent);text-decoration:none}
+nav{background:var(--surface);border-bottom:1px solid var(--border);padding:0 20px;display:flex;align-items:center;justify-content:space-between;height:52px;position:sticky;top:0;z-index:50}
+.nav-logo{font-weight:800;font-size:17px;color:var(--text)}.nav-logo span{color:var(--accent)}
+.nav-back{font-size:13px;color:var(--muted)}
+.hero{text-align:center;padding:28px 20px 16px;max-width:760px;margin:0 auto}
+.hero h1{font-size:clamp(20px,4vw,30px);font-weight:800;line-height:1.2;margin-bottom:8px}
+.hero h1 span{color:var(--accent)}.hero p{color:var(--muted);font-size:14px}
+.tabs{display:flex;gap:6px;max-width:760px;margin:0 auto 4px;padding:0 16px;overflow-x:auto}
+.tab{padding:8px 16px;border:1px solid var(--border);border-radius:8px;background:var(--surface2);color:var(--muted);cursor:pointer;font-size:13px;font-weight:600;white-space:nowrap;transition:all .15s}
+.tab.active{background:var(--accent);color:#fff;border-color:var(--accent)}
+.panel{display:none;max-width:760px;margin:0 auto;padding:16px}
+.panel.active{display:block}
+.card{background:var(--surface);border:1px solid var(--border);border-radius:var(--radius);padding:18px;margin-bottom:14px}
+.card h2{font-size:13px;font-weight:700;margin-bottom:14px;color:var(--accent);text-transform:uppercase;letter-spacing:.04em}
+.form-row{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-bottom:12px}
+@media(max-width:500px){.form-row{grid-template-columns:1fr}}
+.form-row-3{display:grid;grid-template-columns:1fr 1fr 1fr;gap:12px;margin-bottom:12px}
+@media(max-width:600px){.form-row-3{grid-template-columns:1fr 1fr}}
+label{display:block;font-size:11px;font-weight:700;color:var(--muted);margin-bottom:4px;text-transform:uppercase;letter-spacing:.04em}
+input,select{width:100%;padding:9px 12px;background:var(--surface2);border:1px solid var(--border);border-radius:8px;color:var(--text);font-size:14px;outline:none;transition:border-color .15s}
+input:focus,select:focus{border-color:var(--accent)}
+.note{font-size:11px;color:var(--muted);margin-top:3px}
+.result-box{background:var(--surface2);border:1px solid var(--border);border-radius:var(--radius);padding:14px;margin-bottom:14px}
+.result-row{display:flex;justify-content:space-between;align-items:center;padding:6px 0;border-bottom:1px solid var(--border)33}
+.result-row:last-child{border-bottom:none}
+.rl{font-size:12px;color:var(--muted)}.rv{font-size:13px;font-weight:700}
+.rv.accent{color:var(--accent)}.rv.green{color:var(--success)}
+.highlight{background:var(--surface);border:1px solid var(--accent)44;border-radius:var(--radius);padding:18px;text-align:center;margin-bottom:14px}
+.highlight .big{font-size:30px;font-weight:800;color:var(--accent);display:block}
+.highlight .sub{font-size:12px;color:var(--muted);margin-top:4px}
+.info-box{background:var(--surface2);border-left:3px solid var(--accent);border-radius:0 8px 8px 0;padding:10px 14px;font-size:12px;color:var(--muted);margin-bottom:14px;line-height:1.6}
+.info-box strong{color:var(--text)}
+/* Year table */
+.tbl-wrap{overflow-x:auto;margin-bottom:14px}
+table{width:100%;border-collapse:collapse;font-size:12px}
+th{background:var(--surface2);padding:8px 10px;text-align:right;font-size:11px;font-weight:700;color:var(--muted);white-space:nowrap}
+th:first-child{text-align:left}
+td{padding:7px 10px;border-bottom:1px solid var(--border)22;text-align:right}
+td:first-child{text-align:left;color:var(--muted)}
+tr:last-child td{font-weight:700;color:var(--accent);border-bottom:none;border-top:1px solid var(--border)}
+.badge-eee{display:inline-block;background:#10b98122;color:#10b981;padding:2px 7px;border-radius:4px;font-size:11px;font-weight:700;margin-left:8px}
+.rates-bar{display:flex;gap:10px;flex-wrap:wrap;margin-bottom:14px}
+.rate-chip{background:var(--surface);border:1px solid var(--border);border-radius:8px;padding:8px 14px;font-size:13px}
+.rate-chip strong{color:var(--accent)}
+.faq{max-width:760px;margin:20px auto;padding:0 16px 32px}
+.faq h2{font-size:17px;font-weight:700;margin-bottom:14px}
+details{border:1px solid var(--border);border-radius:8px;margin-bottom:8px;overflow:hidden}
+summary{padding:11px 16px;cursor:pointer;font-size:14px;font-weight:600;list-style:none;display:flex;justify-content:space-between;background:var(--surface)}
+summary::after{content:'+';color:var(--accent)}details[open] summary::after{content:'−'}
+details p{padding:11px 16px;font-size:13px;color:var(--muted);background:var(--surface2);line-height:1.7}
+footer{text-align:center;padding:18px;font-size:12px;color:var(--muted);border-top:1px solid var(--border)}
+</style>
+</head>
+<body>
+<nav>
+  <a class="nav-logo" href="https://nxtcraft.github.io/">Nxt<span>Craft</span></a>
+  <a class="nav-back" href="https://nxtcraft.github.io/">← All Tools</a>
+</nav>
+
+<div class="hero">
+  <h1><span>EPF · PPF · SSY</span> Calculator India 2024-25</h1>
+  <p>Year-by-year interest tables · Employer EPF breakdown · Tax-free maturity projections</p>
+</div>
+
+<div class="rates-bar" style="max-width:760px;margin:0 auto 4px;padding:0 16px">
+  <div class="rate-chip">EPF <strong>8.25%</strong> p.a.</div>
+  <div class="rate-chip">PPF <strong>7.1%</strong> p.a.</div>
+  <div class="rate-chip">SSY <strong>8.2%</strong> p.a.</div>
+  <div class="rate-chip" style="color:var(--success)">All EEE — Tax-Free <span class="badge-eee">EEE</span></div>
+</div>
+
+<div class="tabs">
+  <button class="tab active" onclick="showTab('epf',this)">🏢 EPF</button>
+  <button class="tab" onclick="showTab('ppf',this)">📗 PPF</button>
+  <button class="tab" onclick="showTab('ssy',this)">👧 SSY</button>
+</div>
+
+<!-- EPF -->
+<div id="tab-epf" class="panel active">
+  <div class="card">
+    <h2>EPF Inputs</h2>
+    <div class="form-row-3">
+      <div>
+        <label>Basic + DA (₹/month)</label>
+        <input type="number" id="e-basic" value="30000" min="1" oninput="calcEPF()">
+      </div>
+      <div>
+        <label>Years of Service</label>
+        <input type="number" id="e-years" value="10" min="1" max="40" oninput="calcEPF()">
+      </div>
+      <div>
+        <label>Interest Rate (%)</label>
+        <input type="number" id="e-rate" value="8.25" step="0.05" oninput="calcEPF()">
+        <div class="note">EPFO rate FY 2024-25</div>
+      </div>
+    </div>
+    <div class="form-row">
+      <div>
+        <label>Existing EPF Balance (₹)</label>
+        <input type="number" id="e-existing" value="0" min="0" oninput="calcEPF()">
+        <div class="note">If account already running</div>
+      </div>
+      <div>
+        <label>VPF — Voluntary Extra (%)</label>
+        <input type="number" id="e-vpf" value="0" min="0" max="88" oninput="calcEPF()">
+        <div class="note">% of Basic+DA extra by employee</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="result-box">
+    <div class="result-row"><span class="rl">Employee Contribution (12%)</span><span class="rv" id="r-e-emp">—</span></div>
+    <div class="result-row"><span class="rl">Employer → EPF (3.67% or adjusted)</span><span class="rv" id="r-e-erEPF">—</span></div>
+    <div class="result-row"><span class="rl">Employer → EPS (8.33%, max ₹1,250)</span><span class="rv" id="r-e-erEPS">—</span></div>
+    <div class="result-row"><span class="rl">Total Monthly EPF Credit</span><span class="rv accent" id="r-e-monthly">—</span></div>
+    <div class="result-row"><span class="rl">Total Invested (employee share)</span><span class="rv" id="r-e-inv">—</span></div>
+    <div class="result-row"><span class="rl">Total Corpus at Maturity</span><span class="rv green" id="r-e-corpus">—</span></div>
+  </div>
+
+  <div class="highlight">
+    <span class="big" id="r-e-big">₹0</span>
+    <span class="sub">EPF Corpus (Employee + Employer EPF contributions + interest)</span>
+  </div>
+
+  <div class="tbl-wrap">
+    <table id="epf-table">
+      <thead><tr><th>Year</th><th>Opening</th><th>Contributions</th><th>Interest</th><th>Closing</th></tr></thead>
+      <tbody id="epf-tbody"></tbody>
+    </table>
+  </div>
+
+  <div class="info-box">
+    <strong>Employer split:</strong> Total 12% → 8.33% to EPS (capped at ₹1,250/month on ₹15K ceiling) + 3.67% to EPF. If Basic+DA &gt; ₹15,000, employer EPF = 12% × Basic − ₹1,250.<br>
+    <strong>Tax:</strong> EEE — contributions (up to ₹2.5L/yr employee), interest, and maturity all tax-free.
+  </div>
+</div>
+
+<!-- PPF -->
+<div id="tab-ppf" class="panel">
+  <div class="card">
+    <h2>PPF Inputs</h2>
+    <div class="form-row-3">
+      <div>
+        <label>Annual Deposit (₹)</label>
+        <input type="number" id="p-annual" value="150000" min="500" max="150000" oninput="calcPPF()">
+        <div class="note">Min ₹500, Max ₹1,50,000</div>
+      </div>
+      <div>
+        <label>Term (years)</label>
+        <input type="number" id="p-years" value="15" min="15" max="50" step="5" oninput="calcPPF()">
+        <div class="note">15 yrs min, extend in 5-yr blocks</div>
+      </div>
+      <div>
+        <label>Interest Rate (%)</label>
+        <input type="number" id="p-rate" value="7.1" step="0.05" oninput="calcPPF()">
+        <div class="note">Govt rate Q1 FY 2024-25</div>
+      </div>
+    </div>
+    <div>
+      <label>Existing Balance (₹)</label>
+      <input type="number" id="p-existing" value="0" min="0" oninput="calcPPF()" style="max-width:200px">
+    </div>
+  </div>
+
+  <div class="result-box">
+    <div class="result-row"><span class="rl">Total Invested</span><span class="rv" id="r-p-inv">—</span></div>
+    <div class="result-row"><span class="rl">Total Interest Earned</span><span class="rv accent" id="r-p-int">—</span></div>
+    <div class="result-row"><span class="rl">Maturity Amount</span><span class="rv green" id="r-p-mat">—</span></div>
+    <div class="result-row"><span class="rl">Effective Annual Return</span><span class="rv" id="r-p-xirr">—</span></div>
+  </div>
+
+  <div class="highlight">
+    <span class="big" id="r-p-big">₹0</span>
+    <span class="sub">PPF Maturity Amount (fully tax-free)</span>
+  </div>
+
+  <div class="tbl-wrap">
+    <table>
+      <thead><tr><th>Year</th><th>Opening</th><th>Deposit</th><th>Interest</th><th>Closing</th></tr></thead>
+      <tbody id="ppf-tbody"></tbody>
+    </table>
+  </div>
+
+  <div class="info-box">
+    <strong>PPF interest rule:</strong> Interest is calculated on the lowest balance between the 5th and last day of each month. Deposit before the 5th to earn interest for that month.<br>
+    <strong>Tax:</strong> EEE — Section 80C deduction on deposits (up to ₹1.5L), interest and maturity fully tax-free.
+  </div>
+</div>
+
+<!-- SSY -->
+<div id="tab-ssy" class="panel">
+  <div class="card">
+    <h2>Sukanya Samriddhi Yojana Inputs</h2>
+    <div class="form-row-3">
+      <div>
+        <label>Annual Deposit (₹)</label>
+        <input type="number" id="s-annual" value="150000" min="250" max="150000" oninput="calcSSY()">
+        <div class="note">Min ₹250, Max ₹1,50,000</div>
+      </div>
+      <div>
+        <label>Girl Child's Current Age</label>
+        <input type="number" id="s-age" value="5" min="0" max="10" oninput="calcSSY()">
+        <div class="note">Account allowed up to age 10</div>
+      </div>
+      <div>
+        <label>Interest Rate (%)</label>
+        <input type="number" id="s-rate" value="8.2" step="0.05" oninput="calcSSY()">
+        <div class="note">Govt rate Q1 FY 2024-25</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="result-box">
+    <div class="result-row"><span class="rl">Deposit Period</span><span class="rv" id="r-s-depyrs">15 years</span></div>
+    <div class="result-row"><span class="rl">Account Matures At Age</span><span class="rv" id="r-s-matage">—</span></div>
+    <div class="result-row"><span class="rl">Maturity Year</span><span class="rv" id="r-s-matyear">—</span></div>
+    <div class="result-row"><span class="rl">Total Invested</span><span class="rv" id="r-s-inv">—</span></div>
+    <div class="result-row"><span class="rl">Total Interest Earned</span><span class="rv accent" id="r-s-int">—</span></div>
+    <div class="result-row"><span class="rl">Maturity Amount</span><span class="rv green" id="r-s-mat">—</span></div>
+  </div>
+
+  <div class="highlight">
+    <span class="big" id="r-s-big">₹0</span>
+    <span class="sub" id="r-s-sub">SSY Maturity Amount (fully tax-free)</span>
+  </div>
+
+  <div class="tbl-wrap">
+    <table>
+      <thead><tr><th>Year</th><th>Child Age</th><th>Opening</th><th>Deposit</th><th>Interest</th><th>Closing</th></tr></thead>
+      <tbody id="ssy-tbody"></tbody>
+    </table>
+  </div>
+
+  <div class="info-box">
+    <strong>SSY rules:</strong> Account can be opened until girl child turns 10. Deposits made for 15 years from account opening. Account matures 21 years from opening (no deposits in years 16–21 but interest continues).<br>
+    <strong>Tax:</strong> EEE — Section 80C deduction, interest and maturity fully tax-free. Highest rate among all small savings schemes.
+  </div>
+</div>
+
+<div class="faq">
+  <h2>Frequently Asked Questions</h2>
+  <details><summary>What is the EPF interest rate for FY 2024-25?</summary><p>The EPF interest rate for FY 2024-25 is 8.25% per annum as announced by EPFO. Interest is calculated monthly on running balance but credited to your account at the end of the financial year (March). You can edit the rate in the calculator above to model future scenarios.</p></details>
+  <details><summary>How is employer EPF contribution calculated?</summary><p>Employer contributes 12% of Basic+DA. Of this, 8.33% goes to EPS (Employee Pension Scheme), capped at ₹1,250/month (calculated on ₹15,000 wage ceiling). The remaining amount — 3.67% for basic ≤ ₹15,000, or 12% minus ₹1,250 for higher basic — goes to your EPF account.</p></details>
+  <details><summary>Can I withdraw PPF before 15 years?</summary><p>Partial withdrawal is allowed from Year 7 (up to 50% of balance at end of Year 4 or Year 6, whichever is lower). Full premature closure is allowed from Year 6 only in special circumstances — medical emergency, higher education, change of residency. Otherwise the full 15-year lock-in applies.</p></details>
+  <details><summary>What is SSY and who can open it?</summary><p>Sukanya Samriddhi Yojana is a government savings scheme for girl children. A parent or guardian can open one account per girl child, with a maximum of two accounts per family (three if twins/triplets). The account must be opened before the girl turns 10. It offers 8.2% interest — the highest of all small savings schemes — and is fully EEE tax-free.</p></details>
+  <details><summary>What does EEE mean in tax terms?</summary><p>EEE stands for Exempt-Exempt-Exempt: (1) contribution qualifies for Section 80C deduction (saving tax on investment), (2) interest earned is tax-free each year, (3) maturity amount is completely tax-free. EPF, PPF, and SSY all enjoy EEE status, making them the most tax-efficient savings instruments available.</p></details>
+</div>
+
+<footer>
+  <p><a href="https://nxtcraft.github.io/">NxtCraft</a> · EPF PPF SSY Calculator · Free &amp; Private · 100% Browser-Based</p>
+</footer>
+
+<script>
+function fmt(n){return'₹'+Math.round(n).toLocaleString('en-IN');}
+function fmtC(n){return'₹'+Math.round(n/100000)/10+'L';}
+function showTab(id,btn){
+  document.querySelectorAll('.panel').forEach(p=>p.classList.remove('active'));
+  document.querySelectorAll('.tab').forEach(t=>t.classList.remove('active'));
+  document.getElementById('tab-'+id).classList.add('active');btn.classList.add('active');
+}
+
+function calcEPF(){
+  const basic=parseFloat(document.getElementById('e-basic').value)||0;
+  const years=parseInt(document.getElementById('e-years').value)||1;
+  const rate=parseFloat(document.getElementById('e-rate').value)||8.25;
+  const existing=parseFloat(document.getElementById('e-existing').value)||0;
+  const vpfPct=parseFloat(document.getElementById('e-vpf').value)||0;
+
+  const empEPF=basic*0.12;
+  const vpf=basic*vpfPct/100;
+  const empEPFtotal=empEPF+vpf;
+
+  // Employer split: EPS capped at ₹1250, rest to EPF
+  const epsContrib=Math.min(basic*0.0833,1250);
+  const erEPF=basic*0.12-epsContrib;
+  const monthlyCredit=empEPFtotal+erEPF;
+
+  const r=rate/100;
+  let bal=existing;
+  const tbody=document.getElementById('epf-tbody');
+  let rows='',totalInv=0;
+
+  for(let y=1;y<=years;y++){
+    const open=bal;
+    const annual=monthlyCredit*12;
+    // interest on opening balance + mid-year approx on contributions
+    const interest=open*r+(annual*r*0.5);
+    bal=open+annual+interest;
+    totalInv+=empEPFtotal*12;
+    rows+=`<tr><td>${y}</td><td>${fmt(open)}</td><td>${fmt(annual)}</td><td>${fmt(interest)}</td><td>${fmt(bal)}</td></tr>`;
+  }
+  tbody.innerHTML=rows+`<tr><td colspan="4" style="text-align:right">Total Corpus</td><td>${fmt(bal)}</td></tr>`;
+
+  document.getElementById('r-e-emp').textContent=fmt(empEPFtotal)+'/mo';
+  document.getElementById('r-e-erEPF').textContent=fmt(erEPF)+'/mo';
+  document.getElementById('r-e-erEPS').textContent=fmt(epsContrib)+'/mo';
+  document.getElementById('r-e-monthly').textContent=fmt(monthlyCredit)+'/mo';
+  document.getElementById('r-e-inv').textContent=fmt(totalInv);
+  document.getElementById('r-e-corpus').textContent=fmt(bal);
+  document.getElementById('r-e-big').textContent=fmt(bal);
+}
+
+function calcPPF(){
+  const annual=parseFloat(document.getElementById('p-annual').value)||0;
+  const years=parseInt(document.getElementById('p-years').value)||15;
+  const rate=parseFloat(document.getElementById('p-rate').value)||7.1;
+  const existing=parseFloat(document.getElementById('p-existing').value)||0;
+  const r=rate/100;
+
+  let bal=existing,totalInv=0,tbody='';
+  for(let y=1;y<=years;y++){
+    const open=bal;
+    const interest=(open+annual)*r;
+    bal=open+annual+interest;
+    totalInv+=annual;
+    tbody+=`<tr><td>${y}</td><td>${fmt(open)}</td><td>${fmt(annual)}</td><td>${fmt(interest)}</td><td>${fmt(bal)}</td></tr>`;
+  }
+  document.getElementById('ppf-tbody').innerHTML=tbody+`<tr><td colspan="4" style="text-align:right">Maturity</td><td>${fmt(bal)}</td></tr>`;
+
+  const totalInt=bal-existing-totalInv;
+  document.getElementById('r-p-inv').textContent=fmt(totalInv);
+  document.getElementById('r-p-int').textContent=fmt(totalInt);
+  document.getElementById('r-p-mat').textContent=fmt(bal);
+  document.getElementById('r-p-xirr').textContent=rate+'% p.a. (compounded annually)';
+  document.getElementById('r-p-big').textContent=fmt(bal);
+}
+
+function calcSSY(){
+  const annual=parseFloat(document.getElementById('s-annual').value)||0;
+  const age=parseInt(document.getElementById('s-age').value)||0;
+  const rate=parseFloat(document.getElementById('s-rate').value)||8.2;
+  const r=rate/100;
+  const matAge=21;
+  const depYears=15;
+  const totalYears=matAge-age;
+  const curYear=new Date().getFullYear();
+
+  let bal=0,totalInv=0,tbody='';
+  for(let y=1;y<=totalYears;y++){
+    const open=bal;
+    const dep=y<=depYears?annual:0;
+    const interest=(open+dep)*r;
+    bal=open+dep+interest;
+    if(y<=depYears)totalInv+=annual;
+    const childAge=age+y;
+    tbody+=`<tr><td>${y}</td><td>${childAge}</td><td>${fmt(open)}</td><td>${dep?fmt(dep):'—'}</td><td>${fmt(interest)}</td><td>${fmt(bal)}</td></tr>`;
+  }
+  document.getElementById('ssy-tbody').innerHTML=tbody+`<tr><td colspan="5" style="text-align:right">Maturity</td><td>${fmt(bal)}</td></tr>`;
+
+  const matYear=curYear+(matAge-age);
+  document.getElementById('r-s-matage').textContent=`Age ${matAge}`;
+  document.getElementById('r-s-matyear').textContent=matYear;
+  document.getElementById('r-s-inv').textContent=fmt(totalInv);
+  document.getElementById('r-s-int').textContent=fmt(bal-totalInv);
+  document.getElementById('r-s-mat').textContent=fmt(bal);
+  document.getElementById('r-s-big').textContent=fmt(bal);
+  document.getElementById('r-s-sub').textContent=`SSY Maturity Amount in ${matYear} (tax-free)`;
+}
+
+calcEPF();calcPPF();calcSSY();
+</script>
+<style>.related-tools{background:#fffbeb;border-top:1px solid #fde68a;padding:1.25rem 1.5rem;margin-top:1rem}.related-tools h3{font-size:.8rem;font-weight:700;color:#d97706;text-transform:uppercase;letter-spacing:.06em;margin-bottom:.6rem}.related-tools-grid{display:flex;flex-wrap:wrap;gap:.5rem}.related-tools a{display:inline-flex;align-items:center;gap:.35rem;padding:.35rem .8rem;border-radius:20px;border:1.5px solid #fde68a;color:#92400e;font-size:.82rem;font-weight:600;text-decoration:none;transition:all .15s}.related-tools a:hover{background:#d97706;color:#fff;border-color:#d97706}</style>
+<div class="related-tools"><h3>Related Tools</h3><div class="related-tools-grid"><a href="https://nxtcraft.github.io/gratuity/">🎁 Gratuity Calc</a><a href="https://nxtcraft.github.io/sipcalc/">📈 SIP Calculator</a><a href="https://nxtcraft.github.io/taxcalc/">💰 Tax Calculator</a><a href="https://nxtcraft.github.io/fdcalc/">🏧 FD Calculator</a></div></div>
+<script>if("serviceWorker"in navigator)navigator.serviceWorker.register("/pfcalc/sw.js");</script>
+</body>
+</html>
